@@ -3,7 +3,7 @@ attr_accessor :name, :post
 @@all = []
   def initialize(name)
     @name = name
-    @@all << self 
+    @@all << self
   end
 
   def posts
@@ -17,6 +17,10 @@ attr_accessor :name, :post
   def add_post_by_title(title)
     post = Post.new(title)
     post.author = self
+  end
+
+  def self.all
+    @@all
   end
 
   def self.post_count

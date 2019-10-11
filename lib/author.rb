@@ -13,12 +13,13 @@ attr_accessor :name, :post
     post.author = self
   end
 
-  def add_post_by_title(name)
-    post = Post.new(name)
-    add_post(post)
+  def add_post_by_title(title)
+    post = Post.new(title)
+    post.author = self 
   end
 
   def self.post_count
     self.post.count
   end
+
 end
